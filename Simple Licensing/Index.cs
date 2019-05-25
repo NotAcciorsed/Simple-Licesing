@@ -15,34 +15,7 @@ namespace Simple_Licensing
 
 		public static void Init()
 		{
-			WebClient wc = new WebClient();
-
-			//Getting strings from an online file
-			var result = wc.DownloadString("http://downloader.altervista.org/Simple-Licensing");
-
-			//Checking if the online file contains our HWID
-			if (result.Contains(IDs.GetHardDiskSerialNo()))
-			{
-				setColor(ConsoleColor.Green);
-				setResult("Success!");
-			}
-			else
-			{
-				Clipboard.SetText(IDs.GetHardDiskSerialNo());
-				setColor(ConsoleColor.Red);
-				setResult("You are not whitelisted - HWID COPIED!");
-			}
-			Console.ReadLine();
-		}
-
-		public static void setResult(string result)
-		{
-			Console.WriteLine(result);
-		}
-
-		public static void setColor(ConsoleColor consoleColor)
-		{
-			Console.ForegroundColor = consoleColor;
+			Console.WriteLine("rest of code was useless, better to leave a writeline alone");
 		}
 	}
 }
