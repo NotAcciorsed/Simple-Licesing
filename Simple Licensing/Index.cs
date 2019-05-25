@@ -23,14 +23,14 @@ namespace Simple_Licensing
 			//Checking if the online file contains our HWID
 			if (result.Contains(IDs.GetHardDiskSerialNo()))
 			{
-				setResult("Success!");
 				setColor(ConsoleColor.Green);
+				setResult("Success!");
 			}
 			else
 			{
 				Clipboard.SetText(IDs.GetHardDiskSerialNo());
-				setResult("You are not whitelisted - HWID COPIED!");
 				setColor(ConsoleColor.Red);
+				setResult("You are not whitelisted - HWID COPIED!");
 			}
 			Console.ReadLine();
 		}
